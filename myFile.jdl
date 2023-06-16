@@ -1,0 +1,19 @@
+entity Product {
+  name String required minlength(2) maxlength(100)
+  description String required
+  price BigDecimal required min(0)
+  quantity Integer required min(0)
+  createdAt ZonedDateTime required
+  updatedAt ZonedDateTime required
+}
+
+entity Category {
+  name String required minlength(2) maxlength(50)
+  description String
+}
+
+relationship ManyToOne {
+  Product{category(name)} to Category
+}
+
+// paginate Product, Category with pagination

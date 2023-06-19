@@ -16,4 +16,4 @@ relationship ManyToOne {
   Product{category(name)} to Category
 }
 
-// paginate Product, Category with pagination
+ paginate Product, Category with pagination
